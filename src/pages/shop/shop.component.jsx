@@ -6,11 +6,11 @@ import CollectionsOverviewContainer from '../../components/collections-overview/
 import CollectionPageContainer from '../collection/collection.container';
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
-  const dispatch = useDispatch();
-  const fetchCollectionsStartHandler = dispatch(fetchCollectionsStart());
-  useEffect(() => {
-    fetchCollectionsStartHandler();
-  }, [fetchCollectionsStartHandler]);
+   const dispatch = useDispatch();
+  
+   useEffect(() => {
+      dispatch(fetchCollectionsStart());
+    }, [dispatch]);
 
   return (
     <div className='shop-page'>
