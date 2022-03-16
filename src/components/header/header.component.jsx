@@ -20,7 +20,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
   const hidden = useSelector(selectCartHidden);
-  const signOutUser = dispatch(signOutStart());
+  const signOutUser = () => dispatch(signOutStart());
   return (
     <HeaderContainer>
       <LogoContainer to='/'>
